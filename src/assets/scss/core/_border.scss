@@ -1,0 +1,38 @@
+@import 'variables';
+$max: 4;
+
+/*Border width*/
+@for $i from 1 through $max {
+  .b-#{$i} {
+    border-style: solid;
+    border-width: $i * 1px;
+  }
+  .by-#{$i} {
+    border-style: solid;
+    border-bottom-width: $i * 1px;
+    border-top-width: $i * 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+  .bb-#{$i} {
+    border-style: solid;
+    border-bottom-width: $i * 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+  }
+  .bt-#{$i} {
+    border-style: solid;
+    border-top-width: $i * 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+  }
+}
+
+/*Border color*/
+@each $key, $value in $variants {
+  .border-#{ '' + $key} {
+    border-color: $value;
+  }
+}

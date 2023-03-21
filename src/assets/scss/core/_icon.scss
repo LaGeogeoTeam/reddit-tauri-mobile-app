@@ -1,0 +1,13 @@
+.clickable-icon {
+  cursor: pointer;
+  &:active svg {
+    fill: var(--white);
+  }
+}
+
+.clickable-icon-red {
+  cursor: pointer;
+  &:active svg {
+    fill: var(--red-light);
+  }
+}
